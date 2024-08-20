@@ -6,6 +6,8 @@ const path=require('path');
 const mongoose = require('mongoose');
 require('dotenv').config();
 
+const port = process.env.PORT || 8080;
+
 // Connect to MongoDB using Mongoose
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
@@ -23,7 +25,7 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model('User', userSchema);
 
-http.listen(8080, function(){
+http.listen(port, function(){
     console.log('server ready on 8080');
 })
 
