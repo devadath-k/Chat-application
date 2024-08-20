@@ -8,7 +8,6 @@ require('dotenv').config();
 
 const port = process.env.PORT || 8080;
 
-// Connect to MongoDB using Mongoose
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -54,7 +53,7 @@ io.on('connection', socket => {
     socket.on('send', async (message) => {
         // Retrieve the user's name from the database
         const user = await User.findOne({ socketId: socket.id });
-        socket.broadcast.emit('receive', { message: message, name: user.name });
+        socket.broadcast.emit('receive', { message: message, name: user?.name });
     });
 
     socket.on('disconnect', async () => {

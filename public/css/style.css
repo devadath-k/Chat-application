@@ -1,5 +1,9 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
-    background-color: rgba(253, 159, 77, 0.708);
+    background-color: #eceff180;
 }
 .logo{
     display: block;
@@ -12,61 +16,95 @@ body{
     background-color: rgb(255, 255, 255);
     max-width: 1000px;
     margin:auto; 
-    border: 2px solid black;
     border-radius: 5px;
     
 }
 
 .content{
-    height: 79vh;
+    height: 80vh;
     overflow-y: auto;
     padding: 10px;
 }
+
 .message{
-    padding: 10px;
-    margin: 8px 5px;
+    margin: 1px 5px;
+    margin-bottom: 8px;
     max-width: 70%;
-    border: 1px solid black;
     color: rgb(103, 97, 97);
 }
 
-.left{
+.posLeft{
     float: left;
     clear: both;
+}
+
+.left{
+    padding: 10px;
+    float: left;
     border-radius: 10px 10px 10px 0px;
+    border: none;
+    color: white;
+    font-weight: bold;
     background-color: #4bdeff;
+    margin-bottom: 8px;
+}
+
+.label{
+    font-weight: bold;
+    font-size: 14px;
+    color: rgb(55 65 81);
+}
+
+.posRight{
+    float: right;
+    clear: both;
 }
 
 .right{
+    padding: 10px;
     float: right;
-    clear: both;
     border-radius: 10px 10px 0px 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
     background-color: #66ff99;
+    margin-bottom: 8px;
 }
 
 #send-container{
-    display:block;
+    position : relative;
     margin: auto;
     max-width:1070px;
     width: 100%;
     text-align: center;
-    padding-bottom: 5px;
+    padding: 5px;
+    padding-top: 0;
 }
+
 #msg-inp{
-    width:83%;
-    height: 35px;
+    width:100%;
+    height: 40px;
     font-size: 15px;
     margin:0;
-    border:1px solid black;
-    border-radius: 20px 0px 0px 20px;
+    border: none;
+    padding-left: 6px;
+    padding-right: 40px;
+    border-radius: 4px;
+    background-color: rgb(229 231 235);
+    color: rgb(55 65 81);
 }
+
 .btn{
-    width: 13%;
+    position: absolute;
+    right: 8px;
+    top: 3px;
+    width: 34px;
+    height: 34px;
     cursor: pointer;
-    height: 40px;
     overflow: hidden;
-    border:1px solid black;
-    background-color: rgba(253, 159, 77, 0.708);
+    color: white;
+    background-color: rgb(55 65 81);
     font-weight: bold;
-    border-radius:0px 20px 20px 0px;
+    border-radius:4px;
+    font-size: large;
 }
