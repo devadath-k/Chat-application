@@ -39,7 +39,6 @@ app.get('/', function(req, res){
 
 const io=require('socket.io')(http);
 
-const users={};
 
 io.on('connection', socket => {
     socket.on('new-user-joined', async (name) => {
